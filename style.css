@@ -1,0 +1,142 @@
+body {
+    background-color: #F4C541;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    box-sizing: border-box;
+    padding: 25px;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-image: url('images/dinner-bg.jpg');
+    background-size: cover;
+}
+
+.title {
+    font-family: "Courgette", cursive;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
+}
+
+.sub_title {
+    font-family: "Courgette", cursive;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 20px 0px;
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
+}
+
+.form {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.name_input, .name_input:focus {
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    padding: 10px 0px;
+}
+
+button[type="submit"] {
+    border: none;
+    background-color: #fda50f;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.remove {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    color: #FFFFFF;
+}
+
+.edit {
+    background-color:#F4C541;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+.save {
+    background-color: #81b214;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+.name_edit {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (min-width: 426px) {
+    #list {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex-basis: 48%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    header {
+        padding: 50px;
+    }
+
+    #list {
+        justify-content: flex-start;
+    }
+    .card {
+        flex-basis: 32%;
+        margin: 0.65%;
+    }
+
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
