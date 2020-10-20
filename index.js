@@ -101,7 +101,6 @@ submit.addEventListener('click', (e) => {
     e.preventDefault;
     const name = document.getElementById('name').value
     const nameCheck = name.replace(/\s+/g, '')
-    console.log(nameCheck)
     // Check if input field is filled correctly, call renderList if passed
     if(nameCheck.match(checkChar) && name.length < 18) {
         guestList.push(name)
