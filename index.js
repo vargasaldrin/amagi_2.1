@@ -65,11 +65,12 @@ editCard = (e, index) => {
     cardSave.textContent = "save"
     cardSave.addEventListener('click', (e) =>{ 
         // Check if input has been filled correctly, calls saveCard() if passed
-        if(inputName.value.match(checkChar) && inputName.value.length < 14) {
+        const checkName = inputName.value.replace(/\s+/g, '')
+        if(checkName.match(checkChar) && inputName.value.length < 18) {
             guestList[index] = inputName.value
             return saveCard(e, index)
         } else {
-            alert("Please enter alphabets only and must be less than 14 characters long")
+            alert("Please enter alphabets and spaces only and must be less than 18 characters long")
         }
     })
 
@@ -98,13 +99,15 @@ saveCard = (e, index) => {
 // Adds input value to guestList array and calls the renderList function
 submit.addEventListener('click', (e) => {
     e.preventDefault;
-    let name = document.getElementById('name').value
+    const name = document.getElementById('name').value
+    const nameCheck = name.replace(/\s+/g, '')
+    console.log(nameCheck)
     // Check if input field is filled correctly, call renderList if passed
-    if(name.match(checkChar) && name.length < 14) {
+    if(nameCheck.match(checkChar) && name.length < 18) {
         guestList.push(name)
         renderList()
     } else {
-        alert("Please enter alphabets only and must be less than 14 characters long");
+        alert("Please enter alphabets and spaces only and must be less than 18 characters long");
     }
     document.getElementById('name').value = ""
 })
